@@ -21,3 +21,17 @@ describe('calculator operations', () => {
     expect(index.calculator.multiply(5, 2)).toBe(10);
   });
 });
+describe('array analysis', () => {
+  test('average of [10,20,30,40] to equal 25', () => {
+    expect(index.arrayAnalysis([10, 20, 30, 40]).average).toBe(25);
+  });
+  test('min of [10,20,30,40] to equal 10', () => {
+    expect(index.arrayAnalysis([10, 20, 30, 40]).min).toBe(10);
+  });
+  test('max of [10,20,30,40] to equal 40', () => {
+    expect(index.arrayAnalysis([10, 20, 30, 40]).max).toBe(40);
+  });
+  test('length of [10,20,30,40] to equal 4', () => {
+    expect(index.arrayAnalysis([10, 20, 30, 40]).length).toBe(4);
+  });
+});

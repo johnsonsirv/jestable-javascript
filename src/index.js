@@ -1,8 +1,6 @@
 
-const capitalize = (param) => {
-  const firstChar = `${param[0].toUpperCase()}${param.slice(1)}`;
-  return firstChar;
-};
+const capitalize = (param) => `${param[0].toUpperCase()}${param.slice(1)}`;
+
 const reverseString = (param) => param.split('').reverse().join('');
 
 const calculator = (() => {
@@ -15,8 +13,17 @@ const calculator = (() => {
   };
 })();
 
+const arrayAnalysis = (arr) => {
+  return {
+    average: arr.reduce((acc, curr) => acc + curr) / arr.length,
+    min: Math.min(...arr),
+    max: Math.max(...arr),
+    length: arr.length,
+  };
+};
 export {
   calculator,
   capitalize,
   reverseString,
+  arrayAnalysis,
 };
