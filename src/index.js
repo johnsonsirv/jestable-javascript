@@ -1,9 +1,9 @@
 /* eslint-disable consistent-return */
 /* eslint-disable array-callback-return */
 
-const capitalize = (param) => `${param[0].toUpperCase()}${param.slice(1)}`;
+const capitalize = param => `${param[0].toUpperCase()}${param.slice(1)}`;
 
-const reverseString = (param) => param.split('').reverse().join('');
+const reverseString = param => param.split('').reverse().join('');
 
 const calculator = (() => {
   const sum = (a, b) => a + b;
