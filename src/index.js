@@ -48,7 +48,7 @@ const caeserCipher = (strParam, key) => {
   return cipherText;
 };
 
-const arrayAnalysis = (arr) => ({
+const arrayAnalysis = arr => ({
   average: arr.reduce((acc, curr) => acc + curr) / arr.length,
   min: Math.min(...arr),
   max: Math.max(...arr),

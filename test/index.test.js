@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable import/extensions */
+
 import * as index from '../src/index.js';
 
 test('capitalize hello to equal Hello', () => {

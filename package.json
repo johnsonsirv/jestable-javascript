@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "watch-jest": "jest --watchAll --passWithNoTests"
+    "watch-jest": "jest --watchAll --passWithNoTests",
+    "eslint": "eslint ."
   },
   "repository": {
     "type": "git",
