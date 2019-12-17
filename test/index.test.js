@@ -22,6 +22,14 @@ describe('calculator operations', () => {
   });
 });
 describe('array analysis', () => {
+  test('arrayAnalysis of [10,20,30,40] to return object', () => {
+    expect(index.arrayAnalysis([10, 20, 30, 40])).toEqual({
+      average: 25,
+      min: 10,
+      max: 40,
+      length: 4,
+    });
+  });
   test('average of [10,20,30,40] to equal 25', () => {
     expect(index.arrayAnalysis([10, 20, 30, 40]).average).toBe(25);
   });
@@ -33,5 +41,17 @@ describe('array analysis', () => {
   });
   test('length of [10,20,30,40] to equal 4', () => {
     expect(index.arrayAnalysis([10, 20, 30, 40]).length).toBe(4);
+  });
+});
+
+describe('ceaser cipher with key', () => {
+  test('punctuation: \'birds, feather\' to equal \'ipykz, mlhaoly\'', () => {
+    expect(index.ceaserCipher('birds, feather', 7)).toBe('ipykz, mlhaoly');
+  });
+  test('same case: \'Birds Feather\' to equal \'Ipykz Mlhaoly\'', () => {
+    expect(index.ceaserCipher('Birds Feather', 7)).toBe('Ipykz Mlhaoly');
+  });
+  test('convert \'fullstack\' to equal \'hwnnuvcem\'', () => {
+    expect(index.ceaserCipher('fullstack', 2)).toBe('hwnnuvcem');
   });
 });

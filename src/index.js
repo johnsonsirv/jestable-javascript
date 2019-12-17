@@ -13,6 +13,36 @@ const calculator = (() => {
   };
 })();
 
+const ceaserCipher = (strParam, key) => {
+  const alphabetsLower = 'abcdefghijklmnopqrstuvwxyz';
+  const alphabetsUpper = alphabetsLower.toUpperCase();
+  const regex = /[A-Za-z]/;
+  return strParam.split('').map((char) => {
+    const Acode = 'A'.charCodeAt(0);
+    const Zcode = 'Z'.charCodeAt(0);
+    const aCode = 'a'.charCodeAt(0);
+    const zCode = 'z'.charCodeAt(0);
+    const charCode = char.charCodeAt(0);
+    const cipherCharCode = charCode + key;
+
+    if (!regex.test(char)) return char;
+    if (alphabetsLower.includes(char)) {
+      return (
+        cipherCharCode <= zCode
+          ? String.fromCharCode(cipherCharCode)
+          : String.fromCharCode(((charCode - aCode + key) % 26) + aCode)
+      );
+    }
+    if (alphabetsUpper.includes(char)) {
+      return (
+        cipherCharCode <= Zcode
+          ? String.fromCharCode(cipherCharCode)
+          : String.fromCharCode(((charCode - Acode + key) % 26) + Acode)
+      );
+    }
+  }).join('');
+};
+
 const arrayAnalysis = (arr) => {
   return {
     average: arr.reduce((acc, curr) => acc + curr) / arr.length,
@@ -26,4 +56,5 @@ export {
   capitalize,
   reverseString,
   arrayAnalysis,
+  ceaserCipher,
 };
