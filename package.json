@@ -1,0 +1,30 @@
+{
+  "name": "jestable-javascript",
+  "version": "1.0.0",
+  "description": "Hands on with JEST testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch-jest": "jest --watchAll --passWithNoTests",
+    "eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnsonsirv/jestable-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnsonsirv/jestable-javascript/issues"
+  },
+  "homepage": "https://github.com/johnsonsirv/jestable-javascript#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.6",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {}
+}
