@@ -1,4 +1,10 @@
 
+const capitalize = (param) => {
+  const firstChar = `${param[0].toUpperCase()}${param.slice(1)}`;
+  return firstChar;
+};
+const reverseString = (param) => param.split('').reverse().join('');
+
 const calculator = (() => {
   const sum = (a, b) => a + b;
   const subtract = (a, b) => a - b;
@@ -11,4 +17,6 @@ const calculator = (() => {
 
 export {
   calculator,
+  capitalize,
+  reverseString,
 };

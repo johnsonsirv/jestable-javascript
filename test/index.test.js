@@ -1,6 +1,13 @@
 import * as index from '../src/index.js';
 
-describe('calculator', () => {
+test('capitalize hello to equal Hello', () => {
+  expect(index.capitalize('hello')).toBe('Hello');
+});
+test('reverse hello to equal olleh', () => {
+  expect(index.reverseString('hello')).toBe('olleh');
+});
+
+describe('calculator operations', () => {
   test('adds 1 + 2 to equal 3', () => {
     expect(index.calculator.sum(1, 2)).toBe(3);
   });
