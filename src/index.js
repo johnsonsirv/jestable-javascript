@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable array-callback-return */
 
 const capitalize = (param) => `${param[0].toUpperCase()}${param.slice(1)}`;
 
@@ -17,7 +19,8 @@ const ceaserCipher = (strParam, key) => {
   const alphabetsLower = 'abcdefghijklmnopqrstuvwxyz';
   const alphabetsUpper = alphabetsLower.toUpperCase();
   const regex = /[A-Za-z]/;
-  return strParam.split('').map((char) => {
+
+  const cipherText = strParam.split('').map((char) => {
     const Acode = 'A'.charCodeAt(0);
     const Zcode = 'Z'.charCodeAt(0);
     const aCode = 'a'.charCodeAt(0);
@@ -41,16 +44,17 @@ const ceaserCipher = (strParam, key) => {
       );
     }
   }).join('');
+
+  return cipherText;
 };
 
-const arrayAnalysis = (arr) => {
-  return {
-    average: arr.reduce((acc, curr) => acc + curr) / arr.length,
-    min: Math.min(...arr),
-    max: Math.max(...arr),
-    length: arr.length,
-  };
-};
+const arrayAnalysis = (arr) => ({
+  average: arr.reduce((acc, curr) => acc + curr) / arr.length,
+  min: Math.min(...arr),
+  max: Math.max(...arr),
+  length: arr.length,
+});
+
 export {
   calculator,
   capitalize,
