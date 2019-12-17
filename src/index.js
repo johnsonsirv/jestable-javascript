@@ -15,7 +15,7 @@ const calculator = (() => {
   };
 })();
 
-const ceaserCipher = (strParam, key) => {
+const caeserCipher = (strParam, key) => {
   const alphabetsLower = 'abcdefghijklmnopqrstuvwxyz';
   const alphabetsUpper = alphabetsLower.toUpperCase();
   const regex = /[A-Za-z]/;
@@ -60,5 +60,5 @@ export {
   capitalize,
   reverseString,
   arrayAnalysis,
-  ceaserCipher,
+  caeserCipher,
 };

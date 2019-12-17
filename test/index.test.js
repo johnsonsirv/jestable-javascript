@@ -46,12 +46,12 @@ describe('array analysis', () => {
 
 describe('ceaser cipher with key', () => {
   test('punctuation: \'birds, feather\' to equal \'ipykz, mlhaoly\'', () => {
-    expect(index.ceaserCipher('birds, feather', 7)).toBe('ipykz, mlhaoly');
+    expect(index.caeserCipher('birds, feather', 7)).toBe('ipykz, mlhaoly');
   });
   test('same case: \'Birds Feather\' to equal \'Ipykz Mlhaoly\'', () => {
-    expect(index.ceaserCipher('Birds Feather', 7)).toBe('Ipykz Mlhaoly');
+    expect(index.caeserCipher('Birds Feather', 7)).toBe('Ipykz Mlhaoly');
   });
-  test('convert \'fullstack\' to equal \'hwnnuvcem\'', () => {
-    expect(index.ceaserCipher('fullstack', 2)).toBe('hwnnuvcem');
+  test('convert with wrap \'fullstack\' to equal \'hwnnuvcem\'', () => {
+    expect(index.caeserCipher('fullstack', 2)).toBe('hwnnuvcem');
   });
 });
