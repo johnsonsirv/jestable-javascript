@@ -23,7 +23,7 @@ Tests cover simple functions such as:
 - JEST (TDD)
 - NPM
 
-## Installation / Usage
+## Installation
 
 > Clone the repository to your local machine
 
@@ -31,13 +31,22 @@ Tests cover simple functions such as:
 $ git clone https://github.com/johnsonsirv/jestable-javascript.git
 ```
 
-> Go to the directory
+## Usage
 > Open the terminal
 
 ```sh
 $ cd jestable-javascript
 $ npm run test
 ```
+
+### Contributor(s)
+
+[Victor Okeugo](https://angel.co/u/victorokeugo/)
+
+- Github: [@johnsonsirv](https://github.com/johnsonsirv)
+- Twitter: [@vokeugo](https://twitter.com/@vokeugo/)
+- Email: [okeugo.victor.c@gmail.com]()
+
 
 ## How to contribute
 1. Fork it (https://github.com/johnsonsirv/jestable-javascript/fork)
